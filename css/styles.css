@@ -20,10 +20,58 @@ nav ul {
 }
 body {
   margin: 0;
-  font-family: sans-serif;
-  background-color: #1b1a1a;
+  font-family: "Montserrat", sans-serif;
+  background-color:#1B1A1A;
+  color: white;
+}
+:root{
+   --bg-card-blue: #445599;
+   --bg-card-violeta:#7B6A9C;
+   --bg-card-rosa:#CA3685;
+   --bg-card-rosa-clarito:#DF849C;
+   --bg-card-oscuro:#1D0C14;
+   --bg-card-violeta-oscuro:#46377A;
+   --bg-card-degradado:linear-gradient(-300deg, #EC116D 45px, #595CC7 130px, #13257B 240px) ;
+
 }
 
-.container {
-  display: grid;
+.prestamos{
+  background-image: url(../assets/mobile/prestamos\ mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 4.5625rem;
+  width: 15.5rem;
+  
+}
+@media screen and (width >= 768px){
+.prestamos{
+  background-image:url(../assets/tablet/prestamo\ tablet.png) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10rem;
+  width:40.625rem;
+}
+}
+@media screen and (width >= 1440px){
+.prestamos{
+  background-image:url(../assets/desktop/prestamo\ desktop.png) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 11rem; 
+  width: 49.75rem;
+}
+}
+
+.card{
+  background-image: var(--bg-card-degradado);
+  height: 163px;
+  width: 248px;
+  border-radius: 8px;
+}
+
+.invierte{
+  background-color: var(--bg-card-blue);
+ width: 248px;
+ height: 73px;
+ border-radius: 8px;
 }
