@@ -23,6 +23,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color:#1B1A1A;
   color: white;
+  
 }
 :root{
    --bg-card-blue: #445599;
@@ -34,22 +35,40 @@ body {
    --bg-card-degradado:linear-gradient(-300deg, #EC116D 45px, #595CC7 130px, #13257B 240px) ;
 
 }
-
+.container{
+  padding-inline: 36px;
+  padding-top: 27px;
+  display: grid;
+  gap: 16px;
+}
+@media screen and (width >= 768px){
+  .container{
+    grid-template-columns: repeat(2,315px);
+    grid-template-rows: 160px, 339px, 339px, 339px, 160px;
+    gap:20px
+  }
+}
 .prestamos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(../assets/mobile/prestamos\ mobile.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 4.5625rem;
   width: 15.5rem;
-  
+  font-weight: 600;
+  font-size:12px ;
 }
 @media screen and (width >= 768px){
 .prestamos{
   background-image:url(../assets/tablet/prestamo\ tablet.png) ;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 10rem;
-  width:40.625rem;
+  height: 160px;
+  width: 315px;
+  border-radius: 16px;
+  grid-column: 2/3;
 }
 }
 @media screen and (width >= 1440px){
@@ -61,17 +80,151 @@ body {
   width: 49.75rem;
 }
 }
-
+.card-text{
+  font-style: italic;
+  font-weight: 600;
+  font-size:20px ;
+}
 .card{
   background-image: var(--bg-card-degradado);
   height: 163px;
   width: 248px;
   border-radius: 8px;
+padding: 12px;
 }
+@media screen and (width >= 768px){
+  .card{
+  height: 339px;
+    width: 650px;
+    border-radius: 16px;
+    grid-column: 1/3;
+  }
+  }
+@media screen and (width >= 1440px){
+  .card{
+  height: 568px;
+    width: 796px;
+    border-radius: 16px;
+  }
+  }
 
 .invierte{
   background-color: var(--bg-card-blue);
  width: 248px;
  height: 73px;
  border-radius: 8px;
+
+}
+@media screen and (width >= 768px){
+  .invierte{
+    height:160px;
+    width: 315px;
+    border-radius: 16px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  }
+@media screen and (width >= 1440px){
+  .invierte{
+    height:176px;
+    width: 389px;
+    border-radius: 16px;
+  }
+  }
+.millones{
+  height: 252px;
+  width: 248px;
+  background-color: var(--bg-card-violeta);
+  border-radius: 8px;
+ 
+}
+@media screen and (width >= 768px){
+  .millones{
+    height:339px;
+    width: 315px;
+    border-radius: 16px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  }
+
+.tae{
+  background-color: var(--bg-card-rosa-clarito);
+  width: 248px;
+  height: 73px;
+  border-radius: 8px;
+ 
+}
+@media screen and (width >= 768px){
+  .tae{
+    width: 315px;
+    height: 160px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+}
+.seguridad{
+  background-color: var(--bg-card-blue);
+  width: 248px;
+  height: 73px;
+  border-radius: 8px;
+ 
+}
+@media screen and (width >= 768px){
+  .seguridad{
+    width: 315px;
+  height: 159px;
+  grid-column: 2/3;
+   
+  }
+}
+.tae-seguridad{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.reader{
+  background-color: var(--bg-card-oscuro);
+  width: 248px;
+  height: 250px;
+  border-radius: 8px;
+ 
+}
+@media screen and (width >= 768px){
+  .reader{
+    width: 315px;
+  height: 339px;
+  grid-column: 2/3;
+  border-radius: 16px;
+  }
+}
+.parentalControl{
+  background-color: var(--bg-card-rosa);
+  width: 248px;
+  height: 73px;
+  border-radius: 8px;
+  
+}
+@media screen and (width >= 768px){
+  .parentalControl{
+    width: 315px;
+    height: 339px;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+}
+.plazos{
+  background-image: url(../assets/mobile/plazosMobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 248px;
+  height: 73px;
+  border-radius: 8px;
+margin-bottom: 50px;
+}
+@media screen and (width >= 768px){
+  .plazos{
+    width: 650px;
+  height: 160px;
+  }
 }
